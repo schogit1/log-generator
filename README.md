@@ -22,6 +22,17 @@ python log_generator.py \
   --template "{timestamp} {level} {logger} user={user} - {message}"
 ```
 
+Control timestamp sequencing:
+
+```bash
+python log_generator.py \
+  --output app.log \
+  --lines 1000 \
+  --start-time 2024-01-01T00:00:00Z \
+  --min-delay-ms 50 \
+  --max-same-timestamp 5
+```
+
 Supply custom levels, loggers, or messages from newline-delimited files:
 
 ```bash
